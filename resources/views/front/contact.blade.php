@@ -1,90 +1,98 @@
 @extends('front.layouts.app')
 @section('content')
-<section class="contact__area pt-120 pb-60">
-    <div class="container">
-       <div class="row wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-          <div class="col-lg-6">
-             <div class="contact__info-wrapper mb-30">
-                <div class="section__title-one mb-20">
-                   <span>// Contact Us</span>
-                   <h2>Get in Touch</h2>
-                </div>
-                <div class="contact__info-item">
-                   <div class="contact__info-icon">
-                      <i class="fa-solid fa-comment"></i>
-                   </div>
-                   <div class="contact__info-content">
-                      <span>Call Anytime</span>
-                      <h5><a href="tel:926668880000">+91 9564151936</a></h5>
-                   </div>
-                </div>
-               
-                <div class="contact__info-item">
-                   <div class="contact__info-icon">
-                      <i class="fa-solid fa-location-arrow"></i>
-                   </div>
-                   <div class="contact__info-content">
-                      <span>visit office</span>
-                      <h5><a target="_blank" href="https://www.google.com/maps/@23.8272409,90.3665795,11z?hl=en">Office No. 76/4, Ground Floor, M-Block, 3rd Avenue,East Anna Nagar, Chennai - 600102</a></h5>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-6">
-             <div class="contact__form mb-60">
-               @if(Session::has('success'))
-               <div class="text-center">
-                  <span class="text-success fw-bold">
-                     {{ Session::get('success') }}
-                  </span>
-               </div>
-               @endif
-                <form method="POST" action="{{ route('submit.contact') }}">
-                  @csrf
-                   <div class="row">
-                      <div class="col-lg-6">
-                         <div class="contact__from-input">
-                            <input type="text" name="name" placeholder="Name">
-                         </div>
-                      </div>
-                      <div class="col-lg-6">
-                         <div class="contact__from-input">
-                            <input type="email" name="email" placeholder="Email">
-                         </div>
-                      </div>
-                      <div class="col-lg-6">
-                         <div class="contact__from-input">
-                            <input type="tel" name="number" placeholder="Contact Number">
-                         </div>
-                      </div>
-                      <div class="col-lg-6">
-                         <div class="contact__select mb-20">
-                            <select name="dealership">
-                               <option selected disabled>Select Dealership</option>
-                               <option value="revolt">Revolt</option>
-                               <option value="others">Others</option>
-                            </select>
-                         </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="contact__from-input">
-                           <input type="text" name="subject" placeholder="Subject">
-                        </div>
-                     </div>
-                      <div class="col-lg-12">
-                         <div class="contact__from-input">
-                            <textarea name="message" id="Message" placeholder="Write Massage"></textarea>
-                         </div>
-                      </div>
-                      <div class="col-12">
-                         <button class="comment__btn e-btn" type="submit">Send a Massage</button>
-                      </div>
-                   </div>
-                </form>
-             </div>
-          </div>
-       </div>
+    <div class="breadcrumb-area pt-255 pb-170" style="background-image: url('assets/img/banner/banner-4.jpg')">
+        <div class="container-fluid">
+            <div class="breadcrumb-content text-center">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
     </div>
- </section>
 
+
+    <div class="all-info ptb-130">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info-wrapper">
+                        <h4 class="contact-title">INFORMATION</h4>
+                        <div class="communication-info">
+                            <div class="single-communication">
+                                <div class="communication-icon">
+                                    <i class="ti-home" aria-hidden="true"></i>
+                                </div>
+                                <div class="communication-text">
+                                    <h4>Address:</h4>
+                                    <p>Simpleenergy Private Limited 9th Floor, Wing A, Survey No. 2/ 2, North Gate Phase 2,
+                                        Modern Asset, Venkatala Village, Yelahanka, Hobli, Bengaluru, Karnataka 560064,
+                                        India</p>
+                                </div>
+                            </div>
+                            <div class="single-communication">
+                                <div class="communication-icon">
+                                    <i class="ti-mobile" aria-hidden="true"></i>
+                                </div>
+                                <div class="communication-text">
+                                    <h4>Phone:</h4>
+                                    <p>18008900720 - 8537014931</p>
+                                </div>
+                            </div>
+                            <div class="single-communication">
+                                <div class="communication-icon">
+                                    <i class="ti-email" aria-hidden="true"></i>
+                                </div>
+                                <div class="communication-text">
+                                    <h4>Email:</h4>
+                                    <p><a href="#">care@simpleenergy.in</a></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-message-wrapper">
+                        <h4 class="contact-title">GET IN TOUCH</h4>
+                        <div class="contact-message">
+                            <form action="{{ route('submit.contact') }}" method="POST">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="contact-form-style mb-20">
+                                            <input name="name" placeholder="Full Name" type="text"required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="contact-form-style mb-20">
+                                            <input name="mobile" placeholder="Mobile Number" type="number"required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-form-style mb-20">
+                                            <input name="email" placeholder="Email Address" type="email"required>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="contact-form-style">
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                            <button class="submit cr-btn btn-style" type="submit"><span>SEND
+                                                    MASSAGE</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <p class="form-messege"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 @endsection

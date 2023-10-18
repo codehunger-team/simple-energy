@@ -11,53 +11,83 @@ use App\Models\PreBooking;
 use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
-{   
+{
     /**
      * display the index page
      * @return renderable
      */
     public function index()
     {
-        return view ('front.index');
+        return view('front.index');
     }
 
-     /**
-     * display the index page
+    /**
+     * display the about page
      * @return renderable
      */
     public function about()
     {
-        return view ('front.about');
+        return view('front.about');
     }
 
 
-     /**
-     * display the index page
+    /**
+     * display the vehicle page
      * @return renderable
      */
-    public function motorcylce()
+    public function vehicle()
     {
-        return view ('front.motorcycle');
+        return view('front.vehicle');
     }
 
-     /**
-     * display the index page
+    /**
+     * display the dealership page
      * @return renderable
      */
-    public function apply()
+    public function dealership()
     {
-        return view ('front.apply');
+        return view('front.dealership');
     }
 
 
-     /**
-     * display the index page
+    /**
+     * display the contact page
      * @return renderable
      */
     public function contact()
     {
-        return view ('front.contact');
+        return view('front.contact');
     }
+
+    /**
+     * display the check-status page
+     * @return renderable
+     */
+    public function checkStatus()
+    {
+        return view('front.check-status');
+    }
+
+
+    /**
+     * display the book-now page
+     * @return renderable
+     */
+    public function bookNow()
+    {
+        return view('front.book-now');
+    }
+
+
+    /**
+     * display the book-now page
+     * @return renderable
+     */
+    public function faqs()
+    {
+        return view('front.faqs');
+    }
+
 
     /**
      * Store the data in apply quickly table
@@ -65,15 +95,15 @@ class FrontController extends Controller
      * @return renderable
      */
     public function applyQuickly(Request $request)
-    {   
+    {
         $data = $request->except('_token');
         QuickApply::create($data);
-        $emails = ['enquiry@revoltfranchise.com', 'emobilityrevolt@gmail.com','enquiry@revoltfranchise.com'];
-        Mail::send('mail.quick-apply', $data, function($message) use ($emails ){
+        $emails = ['enquiry@revoltfranchise.com', 'emobilityrevolt@gmail.com', 'enquiry@revoltfranchise.com'];
+        Mail::send('mail.quick-apply', $data, function ($message) use ($emails) {
             $message->to($emails, 'Revolt Enquiry')
-            ->subject('Quick Apply Data')
-            ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
-         });
+                ->subject('Quick Apply Data')
+                ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+        });
         return redirect()->back()->with('success', 'Applied Successfully');
     }
 
@@ -87,24 +117,24 @@ class FrontController extends Controller
         $data = $request->except('_token');
         Contact::create($data);
         $data['contact_message'] = $data['message'];
-        $emails = ['enquiry@revoltfranchise.com', 'emobilityrevolt@gmail.com'];
-        Mail::send('mail.contact', $data, function($message) use ($emails ){
-            $message->to($emails, 'Revolt Enquiry')
-            ->subject('Contact Form Data')
-            ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+        $emails = env('RECIPIENT_EMAIL');
+        Mail::send('mail.contact', $data, function ($message) use ($emails) {
+            $message->to($emails, 'Simple Energy Enquiry')
+                ->subject('Simple Energy Contact Form')
+                ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
         });
         return redirect()->back()->with('success', 'Message Sent Successfully');
     }
 
     /**
-    * This function is used to store the Appointment details in Database
-    * @method POST /save-appointment
-    * @param Request
-    * @return Renderable
-    */
+     * This function is used to store the Appointment details in Database
+     * @method POST /save-appointment
+     * @param Request
+     * @return Renderable
+     */
     public function saveAppointment(Request $request)
     {
-        try{
+        try {
             $validator = \Validator::make($request->all(), [
                 'fname' => 'required|min:3',
                 'email' => 'required|email',
@@ -121,7 +151,7 @@ class FrontController extends Controller
                 'dealership' => 'required|in:revolt,others',
             ]);
 
-            if($validator->fails()){
+            if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator->errors());
             }
 
@@ -141,26 +171,25 @@ class FrontController extends Controller
                 'applying_dealership' => $request->dealership,
             ]);
             $data = $request->except('_token');
-            Mail::send('mail.appointment', $data, function($message) {
-                $message->to(env('MAIL_TO'), 'Revolt Enquiry')->subject
-                   ('Appointment Form Data');
-             });
+            Mail::send('mail.appointment', $data, function ($message) {
+                $message->to(env('MAIL_TO'), 'Revolt Enquiry')->subject('Appointment Form Data');
+            });
             return redirect()->back()->with('success', 'Appointment Booked Successfully');
-        }catch(Exception $e){
+        } catch (Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
 
-            /**
-    * This function is used to store the Appointment details in Database
-    * @method POST /save-service
-    * @param Request
-    * @return Renderable
-    */
+    /**
+     * This function is used to store the Appointment details in Database
+     * @method POST /save-service
+     * @param Request
+     * @return Renderable
+     */
 
     public function saveService(Request $request)
     {
-        try{
+        try {
             $validator = \Validator::make($request->all(), [
                 'fname' => 'required|min:3',
                 'email' => 'required|email',
@@ -180,7 +209,7 @@ class FrontController extends Controller
                 'transaction' => 'required',
             ]);
 
-            if($validator->fails()){
+            if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator->errors());
             }
 
@@ -203,12 +232,11 @@ class FrontController extends Controller
                 'transactionID' => $request->transaction,
             ]);
             $data = $request->except('_token');
-            Mail::send('mail.prebooking', $data, function($message) {
-                $message->to(env('MAIL_TO'), 'Revolt Enquiry')->subject
-                   ('Prebooking Form Data');
-             });
+            Mail::send('mail.prebooking', $data, function ($message) {
+                $message->to(env('MAIL_TO'), 'Revolt Enquiry')->subject('Prebooking Form Data');
+            });
             return redirect()->back()->with('success', 'Service Booked Successfully');
-        }catch(Exception $e){
+        } catch (Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
@@ -218,7 +246,7 @@ class FrontController extends Controller
      */
     public function applyNow(Request $request)
     {
-        return view ('front.apply-now');
+        return view('front.apply-now');
     }
 
     /***
@@ -229,14 +257,11 @@ class FrontController extends Controller
         $data = $request->except('_token');
         Appointment::create($data);
         $emails = ['enquiry@revoltfranchise.com', 'emobilityrevolt@gmail.com'];
-        Mail::send('mail.appointment', $data, function($message) use ($emails ){
+        Mail::send('mail.appointment', $data, function ($message) use ($emails) {
             $message->to($emails, 'Revolt Enquiry')
-            ->subject('Apply Now Form Data')
-            ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+                ->subject('Apply Now Form Data')
+                ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
         });
         return redirect()->back()->with('success', 'Message Sent Successfully');
     }
-
-    
-
 }

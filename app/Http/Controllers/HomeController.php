@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -51,5 +52,13 @@ class HomeController extends Controller
     {
         $product = Product::all();
         return view('user/home', compact('product'));
+    }
+
+    public function contactByForm()
+    {
+
+        $contacts = Contact::get();
+
+        return view('', compact('$contacts'));
     }
 }

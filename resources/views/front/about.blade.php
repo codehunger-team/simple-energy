@@ -1,131 +1,153 @@
 @extends('front.layouts.app')
 @section('content')
     <!-- Breadcrumb area start -->
-       <div class="breadcrumb__area include__bg" data-background="assets/img/bg/breadcrumb.jpg" style="background-image: url(&quot;assets/img/bg/breadcrumb.jpg&quot;);">
-          <div class="container fluid">
-             <div class="row">
-                <div class="col-xl-12">
-                   <div class="breadcrumb__wrapper text-center">
-                      <div class="breadcrumb__title">
-                         <h2>about us</h2>
-                      </div>
-                      <div class="breadcrumb__menu">
-                         <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
-                            <ul class="trail-items">
-                               <li class="trail-item trail-begin"><span><a href="index.html">Home</a></span></li>
-                            <li class="trail-item trail-end"><span>about us</span></li>
-                            </ul>
-                         </nav>
-                      </div>
-                   </div>
+    <div class="breadcrumb-area pt-255 pb-170" style="background-image: url('assets/img/banner/banner-4.jpg')">
+        <div class="container-fluid">
+            <div class="breadcrumb-content text-center">
+                <h2>About Us</h2>
+                <ul>
+                    <li>
+                        <a href="#">home</a>
+                    </li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-area pt-125 pb-125">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="overview-content">
+                        <h1> <span>Empowering India</span> with Affordable and Stylish Electric Mobility.</h1>
+
+                        <p>The <span>Simple One</span> is a game changi gerectric vehicle that has been specifically
+                            designed and manufactured in India. With its sleek design and superior performance, the 'Simple
+                            One is the perfect choice for anyone who wants to drive an affordable, yet high quality EV. The
+                            Simple One comes in six different colour variations, including Brazen Black, Namma Red, Azure
+                            Blue, and Grace White, Brazen X and Light X allowing users to choose the one that suits their
+                            style.</p>
+                        <div class="question-area">
+                            <h4>HAVE ANY QUESTION? </h4>
+                            <div class="question-contact">
+                                <div class="question-icon">
+                                    <i class="icofont icofont-phone"></i>
+                                </div>
+                                <div class="question-content-number">
+                                    <h6> 18008900720</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
-    <!-- Breadcrumb area end -->
- 
-    <!-- About area start -->
-    <section class="about__area pt-120 pb-60">
-       <div class="container">
-          <div class="row align-items-center wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-             <div class="col-xl-6 col-lg-6">
-                <div class="about__left-one p-relative mb-60">
-                   <div class="about__left-thumb">
-                      <img src="assets/img/about/about-01.jpg" alt="about-img">
-                   </div>
-                   <div class="about__experience-shape">
-                      <div class="about__experience-content">
-                         <h2>30</h2>
-                         <span>Year Experience</span>
-                         <div class="about__experience-shape-icon">
-                            <i class="fal fa-trophy-alt"></i>
-                         </div>
-                      </div>
-                   </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="overview-img">
+                        <img class="tilter" src="{{ asset('assets/img/slider/scoty.png') }}" alt="">
+                    </div>
                 </div>
-             </div>
-             <div class="col-xl-6 col-lg-6">
-                <div class="about__right-content mb-60">
-                   <div class="section__title-one mb-35">
-                      <span>// About Us</span>
-                      <h2>Best in classy product near from you.</h2>
-                   </div>
-                   <div class="about__description-text">
-                      <p>Revolt Motors has entered the Indian motorcycle market with the RV 400 to begin with, which will be followed up by two more electric products. The electric bikes will be brought to India via the CKD route but will get a high degree of localisation from the onset. Revolt’s future plans include complete localisation of their products to make prices very competitive. It will start operations in Delhi first followed by six other cities.
- 
-                      Hair flowing with the wind, the smell of rubber burning over the tarmac and the feeling of being a free bird flying past everybody else. Irreplaceable! Biking is a passion – yes, we know! And we’re here to juice up your biking experience by giving you the pleasure of being on a motorbike, yet you playing the role of knight in shining armor in the mortal’s campaign of “Save The Earth!”. Seriously, let’s contribute to the society we’ve got so much from? Well, it all starts with you! Revolt Motors is the next-gen mobility company, created for the smart world. With technology at its roots and a class-apart product in the works, Revolt is soon going to introduce India’s first AI-enabled motorcycle without compromising on the performance or aesthetics of a regular ride.</p>
-                   </div>
-                   
+            </div>
+        </div>
+    </div>
+    <div class="services-area pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services orange mb-30 text-center">
+
+                        <div class="services-text">
+                            <h5>Who We Are</h5>
+                            <p>We are Simpleenergy Private Limited, the driving force behind the innovative 'Simple ONE'
+                                electric vehicle designed and manufactured in India. Our commitment to superior performance,
+                                safety, and eco-friendliness reflects in every aspect of our mission.</p>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
-    </section>
-    <!-- About area end -->
- 
-    <!-- Counter area start -->
-    <section class="counter__area">
-       <div class="container">
-          <div class="counter__main-wrapper counter__overlay include__bg" data-background="assets/img/bg/counter-bg-2.jpg" style="background-image: url(&quot;assets/img/bg/counter-bg-2.jpg&quot;);">
-             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                   <div class="counter__item-2 text-center mb-30">
-                      <div class="counter-icon">
-                         <button><i class="fa-solid fa-plus"></i></button>
-                      </div>
-                      <div class="counter__number">
-                         <h2 class="counter">30</h2>
-                      </div>
-                      <div class="counter__title">
-                         <p>Year experience<br> in this field</p>
-                      </div>
-                   </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services yellow mb-30 text-center">
+
+                        <div class="services-text">
+                            <h5>Our Vision</h5>
+                            <p>We envision a world where affordable and high-quality electric vehicles, like the 'Simple
+                                ONE,' are accessible to all, reducing environmental impact and revolutionizing urban
+                                mobility.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                   <div class="counter__item-2 text-center mb-30">
-                      <div class="counter-icon">
-                         <button><i class="fa-solid fa-plus"></i></button>
-                      </div>
-                      <div class="counter__number">
-                         <h2 class="counter">1200</h2>
-                      </div>
-                      <div class="counter__title">
-                         <p>+ Worldwide good <br>
-                            clientse</p>
-                      </div>
-                   </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services purple mb-30 text-center">
+
+                        <div class="services-text">
+                            <h5>Our Mission</h5>
+                            <p>Our mission is to lead the charge in providing cutting-edge electric vehicles, such as the
+                                'Simple ONE,' designed and manufactured in India, to empower individuals with sustainable
+                                transportation options.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                   <div class="counter__item-2 text-center mb-30">
-                      <div class="counter-icon">
-                         <button><i class="fa-solid fa-plus"></i></button>
-                      </div>
-                      <div class="counter__number">
-                         <h2 class="counter">200</h2>
-                      </div>
-                      <div class="counter__title">
-                         <p>Worldwide Captured <br>
-                            online base</p>
-                      </div>
-                   </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-area">
+        <div class="container">
+            <div class="section-title-2 section-title-position">
+                <h2>OUR CUSTOMER REVIEWS</h2>
+            </div>
+            <div class="testimonial-active owl-carousel">
+                <div class="single-testimonial">
+                    <div class="row">
+                        <div class="col-lg-1">
+
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="testimonial-content">
+                                <div class="testimonial-dec">
+                                    <p>"The 'Simple One' is a game-changer in the Indian EV market. The CBS brake system
+                                        provides unmatched safety, and the variety of color options lets me express my
+                                        style. It's an affordable and eco-friendly choice that doesn't compromise on
+                                        quality."</p>
+
+                                </div>
+                                <div class="name-designation">
+                                    <h4>Priya Sharma</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                   <div class="counter__item-2 text-center mb-30">
-                      <div class="counter-icon">
-                         <button><i class="fa-solid fa-plus"></i></button>
-                      </div>
-                      <div class="counter__number">
-                         <h2 class="counter">10</h2><h2>+</h2>
-                      </div>
-                      <div class="counter__title">
-                         <p>Masterclass team <br>
-                            ever made</p>
-                      </div>
-                   </div>
+                <div class="single-testimonial">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-12 col-12">
+
+                        </div>
+                        <div class="col-lg-10 col-md-12 col-12">
+                            <div class="testimonial-content">
+                                <div class="testimonial-dec">
+                                    <p>"I love my 'Simple One' – it's an absolute joy to ride. The robust electric motor
+                                        handles Indian roads like a champ, and the under-seat storage is incredibly
+                                        convenient. It's a sustainable, high-quality option that turns heads wherever I go."
+                                    </p>
+                                </div>
+                                <div class="name-designation">
+                                    <h4>Rajesh Patel</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-12 col-12">
+
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
-    </section>
+            </div>
+        </div>
+    </div>
+    <div class="blog-area pt-150 pb-110">
+
+    </div>
     <!-- Counter area start -->
 @endsection
