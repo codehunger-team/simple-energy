@@ -18,15 +18,16 @@ class User extends Authenticatable
      */
 
     const ADMIN_TYPE = 'admin';
-    
-	
-	
-	public function isAdmin()    {        
-		return $this->user_type === self::ADMIN_TYPE;    
-	} 
-	 
+
+
+
+    public function isAdmin()
+    {
+        return $this->user_type === self::ADMIN_TYPE;
+    }
+
     protected $fillable = [
-        'name', 'last_name', 'email', 'password',
+        'is_admin', 'role_id', 'name', 'last_name', 'email', 'password', 'father_name', 'mobile', 'dob', 'qualification', 'pan_number', 'aadhar_number', 'address', 'district', 'state', 'city', 'post_office', 'pincode', 'dealer_name', 'b_holder_name', 'b_account_no', 'b_ifsc_code', 'b_bank_name', 'b_branch_address', 'login_id'
     ];
 
     /**

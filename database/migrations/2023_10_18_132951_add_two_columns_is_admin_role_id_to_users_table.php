@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('is_admin', [1, 2])->default(2)->after('id');
+            $table->enum('is_admin', [1, 0])->default(0)->after('id');
             $table->unsignedBigInteger('role_id')->nullable()->after('is_admin');
         });
     }

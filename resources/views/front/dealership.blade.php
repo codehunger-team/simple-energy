@@ -22,12 +22,22 @@
         <!-- article-section -->
         <section class="dealership_section ">
             <div class="container">
+                @if ($errors->any())
+                    <div class="alert alert-danger border-left-danger my-2" role="alert">
+                        <ul class="ps-4 my-2">
+                            @foreach ($errors->all() as $error)
+                                <li class="my-3 fs-6" style="list-style-type: circle!important;">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="contact-message-wrapper">
                     <h1 class="contact-title">Dealership Form </h1>
                 </div>
                 <div class="contact-message">
                     <form class="request_qoute_form wrap-form clearfix" method="post" novalidate="novalidate"
-                        action="#">
+                        action="{{ route('dealership.submit') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="contact-form-style mb-20">
@@ -89,7 +99,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact-form-style mb-20">
-                                    <span class="text-input"><input name="Rent" type="text" value=""
+                                    <span class="text-input"><input name="rent" type="text" value=""
                                             placeholder="Type of property ownership Own/Rent*"></span>
                                 </div>
                             </div>
@@ -133,7 +143,7 @@
 
                             <div class="col-lg-12 mt-3">
                                 <div class="form-group text-center">
-                                    <button class="submit cr-btn btn-style" type="submit" name="submit"
+                                    <button class="submit cr-btn btn-style " type="submit"
                                         value="Send Message">Submit</button>
                                 </div>
                             </div>

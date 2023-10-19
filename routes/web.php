@@ -50,6 +50,8 @@ Route::group(['middleware' => ['is_admin', 'XSS']], function () {
 	Route::get('agreement/download/{agreement}', 'AgreementController@downloadAgreement')->name('agreement.download');
 
 	Route::get('contact-by-form-list', 'HomeController@contactByForm')->name('contact.by.form.list');
+	Route::get('booking-list', 'HomeController@bookingList')->name('front.booking.list');
+	Route::get('dealership-list', 'HomeController@dealershipList')->name('front.dealership.list');
 });
 
 
@@ -91,9 +93,11 @@ Route::get('/about', 'Front\FrontController@about')->name('about');
 
 Route::get('/vehicle', 'Front\FrontController@vehicle')->name('vehicle');
 Route::get('/dealership', 'Front\FrontController@dealership')->name('dealership');
+Route::post('/dealership', 'Front\FrontController@dealershipSubmit')->name('dealership.submit');
 Route::get('/contact', 'Front\FrontController@contact')->name('contact.us');
 Route::get('/check-status', 'Front\FrontController@checkStatus')->name('check.status');
 Route::get('/book-now', 'Front\FrontController@bookNow')->name('book.now');
+Route::post('/book-now', 'Front\FrontController@bookNowSubmit')->name('book.now.submit');
 Route::get('/faqs', 'Front\FrontController@faqs')->name('faqs');
 Route::post('/apply-quickly', 'Front\FrontController@applyQuickly')->name('apply-quickly');
 Route::post('/submit-contact', 'Front\FrontController@submitContact')->name('submit.contact');

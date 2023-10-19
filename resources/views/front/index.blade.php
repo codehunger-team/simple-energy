@@ -70,10 +70,9 @@
                                     <h1 style="color:white;">
                                         SIMPLE ONE</h1>
 
-                                    <a href="book-now.html">
-                                        <div class="question-content-number"
-                                            style="background-color:#198754;border-radius:10px;">
-                                            <h6> BOOK NOW</h6>
+                                    <a href="{{ route('book.now') }}">
+                                        <div class="question-content-number btn-primary" style="border-radius:10px;">
+                                            <h6 class="mt-1"> BOOK NOW</h6>
                                         </div>
                                     </a>
                                 </div>
@@ -126,23 +125,23 @@
                         </div>
                     </div>
                     <!-- <div class="carousel-item">
-                                                      <div class="col-lg-12 col-md-12">
-                                                          <div class="overview-content11">
+                                                                                  <div class="col-lg-12 col-md-12">
+                                                                                      <div class="overview-content11">
 
-                                                              <div class="question-area col-md-6">
-                                                                  <h1 style="color:white;"> SIMPLE ONE</h1>
+                                                                                          <div class="question-area col-md-6">
+                                                                                              <h1 style="color:white;"> SIMPLE ONE</h1>
 
-                                                                  <a href="book-now.php">
-                                                                      <div class="question-content-number"
-                                                                          style="background-color:#198754;border-radius:10px;">
-                                                                          <h6> BOOK NOW
-                                                                  </a>
-                                                              </div>
-                                                              </a>
+                                                                                              <a href="book-now.php">
+                                                                                                  <div class="question-content-number"
+                                                                                                      style="background-color:#198754;border-radius:10px;">
+                                                                                                      <h6> BOOK NOW
+                                                                                              </a>
+                                                                                          </div>
+                                                                                          </a>
 
-                                                          </div>
-                                                      </div>
-                                                    </div> -->
+                                                                                      </div>
+                                                                                  </div>
+                                                                                </div> -->
                 </div>
 
                 <!-- Left and right controls/icons -->
@@ -182,9 +181,9 @@
                         <div class="question-area">
                             <h4>HAVE ANY QUESTION? </h4>
                             <div class="question-contact">
-                                <div class="question-icon">
+                                <div class="question-icon ">
                                     <i class="icofont
-                                      icofont-phone"></i>
+                                      icofont-phone btn-primary"></i>
                                 </div>
                                 <div class="question-content-number">
                                     <h6> 18008900720</h6>

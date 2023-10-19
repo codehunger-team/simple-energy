@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\QuickApply;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
+use App\Models\Dealership;
 use App\Models\PreBooking;
 use Illuminate\Support\Facades\Mail;
 
@@ -51,6 +52,33 @@ class FrontController extends Controller
 
 
     /**
+     * submit the dealership page
+     * @param $request
+     * @return renderable
+     */
+    public function dealershipSubmit(Request $request)
+    {
+        $validatedData = $request->validate([
+            'f_name' => 'required',
+            'name' => 'required',
+            'mobile' => 'required',
+            'email' => 'email',
+            'city' => 'required',
+            'state' => 'required',
+            'address' => 'required',
+            'pincode' => 'required',
+            'rent' => 'required',
+            'locality' => 'required',
+            'turnover' => 'required',
+            'experience' => 'required'
+        ]);
+        Dealership::create($validatedData);
+        return redirect()->back()->with('success', 'Applied for dealership successful');
+    }
+
+
+
+    /**
      * display the contact page
      * @return renderable
      */
@@ -76,6 +104,41 @@ class FrontController extends Controller
     public function bookNow()
     {
         return view('front.book-now');
+    }
+
+
+    /**
+     * submit the book-now page
+     * @param $request
+     * @return renderable
+     */
+    public function bookNowSubmit(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'phone_no' => 'required',
+            'email_id' => 'email',
+            'location' => 'required',
+            'vehicle_name' => 'required',
+            'vehicle_color' => 'required',
+            'transaction_id' => 'required',
+            'amount_paid' => 'required',
+            'transaction_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $validatedData['user_id'] = 0;
+        $validatedData['product_id'] = 0;
+        $validatedData['status'] = '';
+
+
+        if ($request->hasFile('transaction_photo')) {
+            $imagePath = $request->file('transaction_photo')->store('booking/transaction-photo', 'public');
+            $validatedData['transaction_photo'] = $imagePath;
+        }
+
+        PreBooking::create($validatedData);
+
+        return redirect()->back()->with('success', 'Booking successful');
     }
 
 

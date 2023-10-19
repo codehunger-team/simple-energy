@@ -127,13 +127,13 @@
                             <h1 class="contact-title">Book A Simple Energy</h1>
                         </div>
                         <div class="contact-message">
-                            <form method="POST" action="#" enctype="multipart/form-data">
-
+                            <form method="POST" action="{{ route('book.now.submit') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="contact-form-style mb-20">
 
-                                            <input class="form-control" id="user_name" name="user_name" type="text"
+                                            <input class="form-control" id="user_name" name="name" type="text"
                                                 placeholder="Enter your Name" required>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@
                                                 <div class="contact-form-style mb-20">
 
                                                     <select class="contact-form-style mb-20" id="vechile_name"
-                                                        name="vechile_name" required>
+                                                        name="vehicle_name" required>
                                                         <option value="">--Select Vehicle Model--</option>
                                                         <option value="single Tone">Simple Energy One Single Tone</option>
                                                         <option value="dual Tone">Simple Energy One Dual Tone</option>
@@ -194,14 +194,15 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
 
-                                                    <button type="button" id="pay_data" class="sub cr-btn btn-style"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                        data-bs-whatever="@mdo">proceed To Pre-Booking</button>
+                                                    <button type="button" id="pay_data"
+                                                        class="sub cr-btn btn-style btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">proceed To
+                                                        Pre-Booking</button>
 
                                                 </div>
                                             </div>
-                                            <br>
-                                            <div class="col-sm-12">
+
+                                            <div class="col-sm-12 mt-3">
                                                 <div class="contact-form-style mb-20">
                                                     <label class="form-label"> Transaction id * </label>
                                                     <input class="form-control" name="transaction_id" id="transaction_id"
@@ -228,7 +229,8 @@
                                     </div>
                                 </div>
                                 <div class="form-btn">
-                                    <button class="cr-btn btn-style"type="submit" name="submit">Book Now</button>
+                                    <button class="cr-btn btn-style"type="submit" name="submit">Book
+                                        Now</button>
                                 </div>
                             </form>
                         </div>

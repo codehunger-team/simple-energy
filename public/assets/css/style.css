@@ -26,6 +26,13 @@
 
 /*----------- 2. Home page style --------*/
 /* header area */
+.btn-primary {
+    background-color: #ffb52f !important;
+    border-color: #ffb52f !important;
+}
+.text-primary {
+    color: #ffb52f !important;
+}
 .header-area {
     left: 0;
     position: absolute;
@@ -52,7 +59,7 @@
     transition: all 0.7s ease 0s;
 }
 .header-cart {
- position: relative;
+    position: relative;
 }
 .stick .header-cart .icon-cart {
     padding: 37px 64px 27px;
@@ -77,7 +84,7 @@
 .icon-cart > span.count-price-add {
     color: #2f2f2f;
     display: inline-block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 1;
@@ -88,7 +95,7 @@
     border-radius: 50px;
     color: #ffb52f;
     display: inline-block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 11px;
     font-weight: 500;
     height: 18px;
@@ -133,7 +140,8 @@
 .shopping-cart-title > h3 a {
     color: #353535;
 }
-.shopping-cart-title > h3 a:hover , .shopping-cart-delete a:hover{
+.shopping-cart-title > h3 a:hover,
+.shopping-cart-delete a:hover {
     color: #ffb52f;
 }
 .shopping-cart-title > span {
@@ -177,13 +185,13 @@
     width: 100%;
 }
 
-.logo-small-device a.logo-for-sticky , 
-.stick .logo-small-device a.logo-sticky-none , 
-.menu-toggle.menu-for-sticky , 
+.logo-small-device a.logo-for-sticky,
+.stick .logo-small-device a.logo-sticky-none,
+.menu-toggle.menu-for-sticky,
 .stick .menu-toggle.menu-sticky-none {
     display: none;
 }
-.stick .logo-small-device a.logo-for-sticky ,
+.stick .logo-small-device a.logo-for-sticky,
 .stick .menu-toggle.menu-for-sticky {
     display: block;
 }
@@ -261,7 +269,7 @@
     display: block;
     font-size: 20px;
     transition: all 0.3s ease 0s;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: bold;
 }
 .chosen-container-single .chosen-single span:hover {
@@ -388,7 +396,7 @@
 .main-menu ul li a {
     color: #bdbdbd;
     display: inline-block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -443,7 +451,8 @@
 .main-menu nav ul li ul > li:hover > a::before {
     opacity: 1;
 }
-.main-menu nav ul li ul li > a, .stick .main-menu nav ul li ul li > a {
+.main-menu nav ul li ul li > a,
+.stick .main-menu nav ul li ul li > a {
     color: #666;
     display: block;
     font-weight: 400;
@@ -541,7 +550,7 @@
 .slider-text-img h6 {
     color: #5d5d5d;
     display: inline-block;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
     margin: 0px 11px 0 0;
@@ -645,7 +654,8 @@
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-.owl-item.active .slider-content * {}
+.owl-item.active .slider-content * {
+}
 .owl-item.active .slider-animated-1 h5 {
     -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
@@ -770,7 +780,8 @@
 .overview-content {
     margin-top: 19px;
 }
-.overview-content h1 , .overview-content h2 {
+.overview-content h1,
+.overview-content h2 {
     color: #001232;
     font-weight: 400;
     font-size: 36px;
@@ -787,10 +798,10 @@
     margin: 6px 0 40px;
 }
 .overview-content > p {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 0;
-  width: 93%;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    width: 93%;
 }
 .overview-content > p span {
     color: #303030;
@@ -842,7 +853,7 @@
     position: absolute;
     content: "";
     background-color: #001232;
-    opacity: .65;
+    opacity: 0.65;
     left: 0;
     right: 0;
     width: 100%;
@@ -877,10 +888,10 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 28px;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     margin: 0;
 }
-.banner-wrapper:hover::after{
+.banner-wrapper:hover::after {
     left: 20px;
     bottom: 20px;
     right: 20px;
@@ -927,7 +938,7 @@
 }
 .product-wrapper {
     position: relative;
-    box-shadow: 0 2px 8px .5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 8px 0.5px rgba(0, 0, 0, 0.22);
     overflow: hidden;
 }
 .product-list .product-wrapper {
@@ -937,7 +948,8 @@
 .product-img {
     position: relative;
 }
-.product-slider-active .product-wrapper , .product-accessories-active .product-wrapper {
+.product-slider-active .product-wrapper,
+.product-accessories-active .product-wrapper {
     margin: 10px 5px 30px;
 }
 .product-item-dec {
@@ -990,11 +1002,11 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 7px;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 .product-price > span {
     color: #353535;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
@@ -1047,20 +1059,23 @@
     float: right;
     margin-top: 10px;
 }
-.product-slider-active.owl-carousel .owl-nav button , .latest-product-slider.owl-carousel .owl-nav button {
+.product-slider-active.owl-carousel .owl-nav button,
+.latest-product-slider.owl-carousel .owl-nav button {
     display: inline-block;
     margin: 0 0 0 17px;
     color: #9b9b9b;
     font-weight: bold;
     font-size: 18px;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     position: relative;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
-.product-slider-active.owl-carousel .owl-nav button:hover , .latest-product-slider.owl-carousel .owl-nav button:hover {
+.product-slider-active.owl-carousel .owl-nav button:hover,
+.latest-product-slider.owl-carousel .owl-nav button:hover {
     color: #ffb52f;
 }
-.product-slider-active.owl-carousel .owl-nav button.owl-prev::before , .latest-product-slider.owl-carousel .owl-nav button.owl-prev::before {
+.product-slider-active.owl-carousel .owl-nav button.owl-prev::before,
+.latest-product-slider.owl-carousel .owl-nav button.owl-prev::before {
     background-color: #9b9b9b;
     content: "";
     height: 2px;
@@ -1113,14 +1128,14 @@
 .latest-price > span {
     color: #e1e1e1;
     display: block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
 }
 .latext-btn > a {
     background-color: #fff;
     color: #001232;
     display: inline-block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     font-weight: bold;
     padding: 8px 25px 10px;
@@ -1153,7 +1168,7 @@
 .product-title-price-2 > span {
     color: #353535;
     display: block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     line-height: 1;
     margin-bottom: 5px;
@@ -1181,7 +1196,7 @@
     bottom: -10px;
     opacity: 0;
 }
-.section-title.section-fluid  > p {
+.section-title.section-fluid > p {
     width: 36%;
 }
 
@@ -1229,7 +1244,7 @@
 .testimonial-dec > p span {
     font-size: 16px;
     font-weight: 600;
-    color: #303030; 
+    color: #303030;
 }
 .name-designation > h4 {
     font-size: 18px;
@@ -1240,7 +1255,7 @@
     color: #001232;
     font-size: 16px;
     line-height: 1;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 .name-designation {
     margin-top: 28px;
@@ -1279,7 +1294,7 @@
 .testimonial-active.owl-carousel .owl-nav button {
     color: #9b9b9b;
     display: inline-block;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     font-weight: bold;
     margin: 0 18px 0 0;
@@ -1392,8 +1407,6 @@
     color: #001232;
 }
 
-
-
 /*--- blog ---*/
 
 .blog-img {
@@ -1463,7 +1476,8 @@
     font-weight: 300;
     margin: 0;
 }
-.blog-hm-content > p span , .footer-about > p span {
+.blog-hm-content > p span,
+.footer-about > p span {
     font-weight: 600;
     font-size: 16px;
 }
@@ -1480,7 +1494,8 @@
 
 /* footer */
 
-.footer-about > p , .single-tweet > p {
+.footer-about > p,
+.single-tweet > p {
     color: #919191;
     font-weight: 300;
     margin: 0;
@@ -1496,7 +1511,7 @@
     color: #b6b6b6;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 .footer-support {
     margin-top: 27px;
@@ -1524,7 +1539,7 @@
     top: 6px;
     width: 10px;
     z-index: 999;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 .quick-links ul li:last-child {
     padding-bottom: 0px;
@@ -1534,7 +1549,9 @@
     font-size: 15px;
     font-weight: 300;
 }
-.quick-links ul li:hover a , .single-tweet > p a:hover , .food-info-content > a:hover {
+.quick-links ul li:hover a,
+.single-tweet > p a:hover,
+.food-info-content > a:hover {
     color: #ffb52f;
 }
 .quick-links ul li:hover::before {
@@ -1665,9 +1682,9 @@
     margin: 3px 0 0 10px;
 }
 .qwick-view-content > p {
-  font-size: 15px;
-  font-weight: 300;
-  margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 25px;
 }
 .select-option-part label {
     font-size: 14px;
@@ -1688,7 +1705,8 @@
     padding-left: 20px;
     position: relative;
     width: 100%;
-    background: rgba(0, 0, 0, 0) url("../img/icon-img/1.png") no-repeat scroll right 20px center;
+    background: rgba(0, 0, 0, 0) url("../img/icon-img/1.png") no-repeat scroll
+        right 20px center;
 }
 .qtybutton {
     color: #727272;
@@ -1774,7 +1792,7 @@ input.cart-plus-minus-box {
     right: 370px;
     text-shadow: 0 1px 0 #fff;
     top: 32px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -1976,7 +1994,7 @@ input.cart-plus-minus-box {
     line-height: 47px;
     text-align: center;
     width: 47px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 .communication-icon {
     margin-right: 15px;
@@ -1986,7 +2004,7 @@ input.cart-plus-minus-box {
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 5px;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
 }
 .communication-text > p {
     color: #666;
@@ -2003,7 +2021,7 @@ input.cart-plus-minus-box {
     background-color: #ffb52f;
     color: #fff;
 }
-.contact-message p{
+.contact-message p {
     margin-top: 10px;
     margin-bottom: 0;
     color: #555;
@@ -2064,7 +2082,8 @@ input.cart-plus-minus-box {
 .product-sorting .sorting select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: #f1f1f1 url("../img/icon-img/1.png") no-repeat scroll right 10px center;
+    background: #f1f1f1 url("../img/icon-img/1.png") no-repeat scroll right 10px
+        center;
     border: medium none;
     border-radius: 5px;
     font-size: 13px;
@@ -2088,26 +2107,27 @@ input.cart-plus-minus-box {
     text-align: center;
     width: 35px;
 }
-.paginations ul li.active a, .paginations ul li a:hover {
+.paginations ul li.active a,
+.paginations ul li a:hover {
     background-color: #ffb52f;
     color: #fff;
 }
 
 /*--- Product sidebar ---*/
 .shop-product-sorting a {
-  color: #001232;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0 10px;
+    color: #001232;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 10px;
 }
 
 .shop-product-sorting a.active {
-  color: #ffb52f;
+    color: #ffb52f;
 }
 .shop-product-sorting {
-  margin-right: 30px;
-  margin-top: 6px;
+    margin-right: 30px;
+    margin-top: 6px;
 }
 .sidebar-search form {
     position: relative;
@@ -2176,7 +2196,8 @@ h3.sidebar-widget {
 .widget-categories ul li a:hover {
     color: #ffb52f;
 }
-.price_filter .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+.price_filter
+    .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
     background: #ebebeb none repeat scroll 0 0;
     border: medium none;
     border-radius: 5px;
@@ -2229,7 +2250,7 @@ h3.sidebar-widget {
     padding: 9px 22px 7px;
     text-transform: uppercase;
     border-radius: 5px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 .price_slider_amount > button:hover {
     background-color: #ffb52f;
@@ -2419,7 +2440,7 @@ button.product-filter-toggle:hover,
 }
 .product-list .product-img {
     flex: 0 0 370px;
-    margin-right: 50px;                                               
+    margin-right: 50px;
 }
 .product-list.product-list-width-2 .product-img {
     flex: 0 0 260px;
@@ -2544,7 +2565,7 @@ button.product-filter-toggle:hover,
     opacity: 1;
 }
 .product-dec-slider .owl-dots {
-    display: none
+    display: none;
 }
 .product-details-content h2 {
     color: #353535;
@@ -2828,7 +2849,7 @@ h1.cart-heading {
 .table-content table th {
     border-top: medium none;
     color: #353535;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
     font-weight: 400;
     padding: 0 10px 12px;
@@ -3019,7 +3040,7 @@ h1.cart-heading {
     position: absolute;
     right: 0;
     text-transform: uppercase;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 .shop-total > h3 {
     background-color: #ffb52f;
@@ -3102,7 +3123,7 @@ h1.cart-heading {
 .coupon-accordion span {
     cursor: pointer;
     color: #6f6f6f;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 .coupon-accordion span:hover,
 p.lost-password a:hover {
@@ -3115,12 +3136,13 @@ p.lost-password a:hover {
     padding: 20px;
 }
 .coupon-info p.coupon-text {
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 .coupon-info p {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
-.coupon-info p.form-row-first {}
+.coupon-info p.form-row-first {
+}
 .coupon-info p.form-row-first label,
 .coupon-info p.form-row-last label {
     display: block;
@@ -3139,7 +3161,8 @@ p.lost-password a:hover {
     width: 370px;
     background-color: transparent;
 }
-.coupon-info p.form-row-last {}
+.coupon-info p.form-row-last {
+}
 .coupon-info p.form-row input[type="submit"]:hover,
 p.checkout-coupon input[type="submit"]:hover {
     background: #ffb52f none repeat scroll 0 0;
@@ -3233,10 +3256,11 @@ p.checkout-coupon input[type="submit"] {
 .checkout-form-list label {
     color: #444;
 }
-.checkout-form-list label span.required {}
-.checkout-form-list input[type=text],
-.checkout-form-list input[type=password],
-.checkout-form-list input[type=email] {
+.checkout-form-list label span.required {
+}
+.checkout-form-list input[type="text"],
+.checkout-form-list input[type="password"],
+.checkout-form-list input[type="email"] {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #e5e5e5;
     border-radius: 0;
@@ -3264,9 +3288,10 @@ p.checkout-coupon input[type="submit"] {
     color: #333;
     display: inline-block;
 }
-.checkout-form-list input[type=password] {}
+.checkout-form-list input[type="password"] {
+}
 .create-account {
-    display: none
+    display: none;
 }
 .ship-different-title h3 label {
     display: inline-block;
@@ -3282,7 +3307,7 @@ p.checkout-coupon input[type="submit"] {
     width: 100%;
 }
 #ship-box-info {
-    display: none
+    display: none;
 }
 .your-order {
     background: #f2f2f2 none repeat scroll 0 0;
@@ -3338,7 +3363,7 @@ p.checkout-coupon input[type="submit"] {
     border-bottom: medium none;
 }
 .your-order-table table tr.cart_item:hover {
-    background: #F9F9F9
+    background: #f9f9f9;
 }
 .your-order-table table tr.order-total td span {
     color: #444;
@@ -3356,7 +3381,7 @@ p.checkout-coupon input[type="submit"] {
     padding-left: 25px;
     position: relative;
     text-transform: capitalize;
-    text-decoration: none
+    text-decoration: none;
 }
 .payment-content p {
     font-size: 13px;
@@ -3516,8 +3541,8 @@ p.checkout-coupon input[type="submit"] {
     color: #fff;
 }
 .blog-social ul li.vimeo a:hover {
-    background-color: #4EBBFF;
-    border: 2px solid #4EBBFF;
+    background-color: #4ebbff;
+    border: 2px solid #4ebbff;
     color: #fff;
 }
 .blog-social ul li.tumblr a:hover {
@@ -3585,10 +3610,12 @@ p.checkout-coupon input[type="submit"] {
     display: flex;
     justify-content: space-between;
 }
-.blog-dec-tags , .blog-dec-social {
+.blog-dec-tags,
+.blog-dec-social {
     display: flex;
 }
-.blog-dec-tags > span , .blog-dec-social > span {
+.blog-dec-tags > span,
+.blog-dec-social > span {
     display: inline-block;
     float: left;
     font-weight: 500;
@@ -3698,7 +3725,8 @@ p.checkout-coupon input[type="submit"] {
 .leave-form {
     margin-bottom: 30px;
 }
-.blog-reply-wrapper form input, .blog-reply-wrapper form textarea {
+.blog-reply-wrapper form input,
+.blog-reply-wrapper form textarea {
     background: #f7f7f7 none repeat scroll 0 0;
     border: medium none;
     color: #666;
@@ -3725,11 +3753,14 @@ p.checkout-coupon input[type="submit"] {
 .blog-reply-wrapper form .text-leave input:hover {
     background-color: #ffb52f;
 }
-.blog-reply-wrapper form input::-moz-placeholder, .blog-reply-wrapper form textarea::-moz-placeholder {
+.blog-reply-wrapper form input::-moz-placeholder,
+.blog-reply-wrapper form textarea::-moz-placeholder {
     color: #666;
     opacity: 1;
 }
-.blog-details-btn > a:hover , .blog-dec-tags > ul li a:hover , .blog-dec-social ul li a:hover {
+.blog-details-btn > a:hover,
+.blog-dec-tags > ul li a:hover,
+.blog-dec-social ul li a:hover {
     color: #ffb52f;
 }
 /*--------- 12. Scrollup ---------*/
@@ -3753,37 +3784,19 @@ p.checkout-coupon input[type="submit"] {
 }
 
 .tab-content.jump > .tab-pane {
-  display: block;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 
 .tab-content.jump > .tab-pane.active {
-  display: block;
-  height: auto;
-  opacity: 1;
-  overflow: visible;
+    display: block;
+    height: auto;
+    opacity: 1;
+    overflow: visible;
 }
 
 .product-slider-active {
-  overflow: hidden;
+    overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

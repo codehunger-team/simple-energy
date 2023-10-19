@@ -26,6 +26,9 @@
 
     <!-- Favicon -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
+
+    {{-- bootstrap javascript cdn  --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -111,6 +114,16 @@
                 <a class="nav-link" href="{{ route('contact.by.form.list') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Contact by Form') }}</span></a>
+            </li>
+            <li class="nav-item {{ Nav::isRoute('home') }}">
+                <a class="nav-link" href="{{ route('front.booking.list') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>{{ __('Booking List') }}</span></a>
+            </li>
+            <li class="nav-item {{ Nav::isRoute('home') }}">
+                <a class="nav-link" href="{{ route('front.dealership.list') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>{{ __('Dealership List') }}</span></a>
             </li>
 
             {{-- <!-- Divider -->
