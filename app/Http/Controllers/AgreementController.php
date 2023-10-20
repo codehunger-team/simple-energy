@@ -29,7 +29,7 @@ class AgreementController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin',0 )->get();
+        $users = User::where('is_admin','0' )->get();
         return view('admin/agreement/create',compact('users'));
     }
 

@@ -14,13 +14,13 @@ class ApprovalLetterController extends Controller
     public function index()
     {
         $approvalLetters = ApprovalLetter::latest()->paginate(10);
-        return view('admin/approval-letter/index',compact('approvalLetters'));
+        return view('admin/approval-letter/index', compact('approvalLetters'));
     }
 
     public function create()
     {
-		$users = User::where('is_admin',0 )->get();
-        return view('admin/approval-letter/create',compact('users'));
+        $users = User::where('is_admin', '0')->get();
+        return view('admin/approval-letter/create', compact('users'));
     }
 
     public function store(Request $request)
@@ -36,10 +36,10 @@ class ApprovalLetterController extends Controller
 
 
         $approvalLetter = new ApprovalLetter;
-		$users = User::where('id',$request->input('user_id') )->first();
-		
-		$approvalLetter->user_id = $request->input('user_id');
-        $approvalLetter->name = $users->name; 
+        $users = User::where('id', $request->input('user_id'))->first();
+
+        $approvalLetter->user_id = $request->input('user_id');
+        $approvalLetter->name = $users->name;
         $approvalLetter->registration = $request->input('registration');
         $approvalLetter->file_no = $request->input('file_no');
         $approvalLetter->year = $request->input('year');
@@ -54,12 +54,12 @@ class ApprovalLetterController extends Controller
     public function show($id)
     {
 
-         $approvalLetter = ApprovalLetter::findOrFail($id);
-		 $users = User::where('is_admin',0 )->get();
-         return view('admin/approval-letter/edit',compact('approvalLetter','users'));
+        $approvalLetter = ApprovalLetter::findOrFail($id);
+        $users = User::where('is_admin', 0)->get();
+        return view('admin/approval-letter/edit', compact('approvalLetter', 'users'));
     }
-    
-    public function download($id) 
+
+    public function download($id)
     {
         $approval = ApprovalLetter::findOrFail($id);
         return view('admin/approval-letter/viewLetter', compact('approval'));
@@ -98,21 +98,19 @@ class ApprovalLetterController extends Controller
 
     public function destroy(ApprovalLetter $approval_letter)
     {
-        try{
+        try {
             $approval_letter->delete();
             $data = ['success' => true, 'message' => 'Approval Letter Deleted Successfully'];
             return response()->json($data);
-        }catch(Exception $e){
+        } catch (Exception $e) {
             $data = ['success' => false, 'message' => $e->getMessage()];
             return response()->json($data, 422);
         }
     }
-   
+
     public function userApprovalLetter()
     {
-        $approvalLetters = ApprovalLetter::where('user_id',Auth::user()->id )->latest()->paginate(10);
-        return view('user/approval-letter',compact('approvalLetters'));
+        $approvalLetters = ApprovalLetter::where('user_id', Auth::user()->id)->latest()->paginate(10);
+        return view('user/approval-letter', compact('approvalLetters'));
     }
-
- 
 }
