@@ -25,7 +25,7 @@
 
     <div class="row">
 
-      
+
 
         <div class="col-lg-8 order-lg-1">
 
@@ -37,37 +37,33 @@
 
                 <div class="card-body">
 
-                    <form method="POST" action="{{ url('product/'.$product->id) }}" autocomplete="off" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('product/' . $product->id) }}" autocomplete="off"
+                        enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="id" value="{{ $product->id }}">
                         <input type="hidden" name="save_product_file" value="{{ $product->image }}">
-                       
+
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="modal_no">Modal No<span class="small text-danger">*</span></label>
-                                        <input type="text" id="modal_no" class="form-control" name="modal_no" value="{{ $product->modal_no }}">
+                                        <label class="form-control-label" for="modal_no">Modal No<span
+                                                class="small text-danger">*</span></label>
+                                        <input type="text" id="modal_no" class="form-control" name="modal_no"
+                                            value="{{ $product->modal_no }}">
                                     </div>
                                 </div>
-                          
+
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="color">color<span class="small text-danger">*</span></label>
-                                        <input type="text" id="color" class="form-control" name="color" value="{{ $product->color }}">
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="loginID">Price<span class="small text-danger">*</span></label>
-                                        <input type="price" id="price" class="form-control" name="price" value="{{ $product->price }}">
+                                        <label class="form-control-label" for="color">color<span
+                                                class="small text-danger">*</span></label>
+                                        <input type="text" id="color" class="form-control" name="color"
+                                            value="{{ $product->color }}">
                                     </div>
                                 </div>
                             </div>
@@ -75,22 +71,34 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="image">Image<span class="small text-danger">*</span></label>
+                                        <label class="form-control-label" for="loginID">Price<span
+                                                class="small text-danger">*</span></label>
+                                        <input type="price" id="price" class="form-control" name="price"
+                                            value="{{ $product->price }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="image">Image<span
+                                                class="small text-danger">*</span></label>
                                         <input type="file" id="image" class="form-control" name="image">
                                     </div>
                                 </div>
                             </div>
 
 
-                        <!-- Button -->
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button type="submit" class="btn btn-primary">Update</button>
-                                    <a href="{{ url('product') }}" class="btn btn-light" title="Cancel">Cancel</a>
+                            <!-- Button -->
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <a href="{{ url('product') }}" class="btn btn-light" title="Cancel">Cancel</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </form>
 
                 </div>

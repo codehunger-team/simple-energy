@@ -55,31 +55,31 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
-            <li class="nav-item {{ Nav::isRoute('home') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('appointment') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('All Applications') }}</span></a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('users') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Users') }}</span></a>
             </li>
-            <li class="nav-item {{ Nav::isRoute('home') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('orders/views') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Orders') }}</span></a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('invoice') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Invoices') }}</span></a>
             </li>
-            <li class="nav-item {{ Nav::isRoute('home') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('qrcode') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('QR Code') }}</span></a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('prebooking') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -100,16 +100,16 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Product') }}</span></a>
             </li>
-            <li class="nav-item {{ Nav::isRoute('home') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ url('quickapply') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Applied Quickly') }}</span></a>
-            </li>
-            <li class="nav-item {{ Nav::isRoute('home') }}">
+            </li> --}}
+            {{-- <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ route('general-enquiries.index') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('General Enquiries') }}</span></a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ route('contact.by.form.list') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>

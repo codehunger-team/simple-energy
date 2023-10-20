@@ -4,7 +4,7 @@
             title: 'Success!',
             text: '{{ $message }}',
             icon: 'success',
-            timer: 3000,
+
         });
     </script>
 @endif

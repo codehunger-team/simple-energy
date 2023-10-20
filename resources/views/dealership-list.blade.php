@@ -30,6 +30,7 @@
                             <th>Locality</th>
                             <th>Turn Over</th>
                             <th>Experience</th>
+                            <th>Application Number</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,6 +51,7 @@
                                     <td>{{ $dealership->locality }}</td>
                                     <td>{{ $dealership->turnover }}</td>
                                     <td>{{ $dealership->experience }}</td>
+                                    <td>{{ $dealership->application_number }}</td>
                                 </tr>
                                 @php $i--; @endphp
                             @endforeach

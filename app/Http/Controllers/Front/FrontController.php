@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Appointment;
 use App\Models\Dealership;
 use App\Models\PreBooking;
+use App\Models\Product;
 use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
@@ -38,7 +39,8 @@ class FrontController extends Controller
      */
     public function vehicle()
     {
-        return view('front.vehicle');
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('front.vehicle', compact('products'));
     }
 
     /**
@@ -72,8 +74,20 @@ class FrontController extends Controller
             'turnover' => 'required',
             'experience' => 'required'
         ]);
+
+        $randomNumber = 'SE' . str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT);
+
+        $userEmail =  $validatedData['email'];
+
+        $validatedData['application_number'] = $randomNumber;
         Dealership::create($validatedData);
-        return redirect()->back()->with('success', 'Applied for dealership successful');
+        // send email to dealer 
+        $this->sendMailToUser($randomNumber, $userEmail);
+
+        // send email to admin
+        $this->sendMailToAdmin($validatedData);
+
+        return redirect()->back()->with('success', 'Thank you for applying to dealership with us, your application number (' . $randomNumber . ') has been successfully generated.');
     }
 
 
@@ -103,7 +117,8 @@ class FrontController extends Controller
      */
     public function bookNow()
     {
-        return view('front.book-now');
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('front.book-now', compact('products'));
     }
 
 
@@ -180,6 +195,7 @@ class FrontController extends Controller
         $data = $request->except('_token');
         Contact::create($data);
         $data['contact_message'] = $data['message'];
+        $data['subject'] = 'Simple Energy Contact Form';
         $emails = env('RECIPIENT_EMAIL');
         Mail::send('mail.contact', $data, function ($message) use ($emails) {
             $message->to($emails, 'Simple Energy Enquiry')
@@ -326,5 +342,25 @@ class FrontController extends Controller
                 ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
         });
         return redirect()->back()->with('success', 'Message Sent Successfully');
+    }
+
+
+    private function sendMailToUser($data, $email)
+    {
+        Mail::send('mail.dealership-user', ['thanking' => $data], function ($message) use ($email) {
+            $message->to($email, 'Thanking from Simple Energy')
+                ->subject('Thanking from Simple Energy')
+                ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+        });
+    }
+
+    private function sendMailToAdmin($data)
+    {
+        $email = env('RECIPIENT_EMAIL');
+        Mail::send('mail.dealership-admin', $data, function ($message) use ($email) {
+            $message->to($email, 'Simple Energy Dealership')
+                ->subject('Simple Energy Dealership Form')
+                ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+        });
     }
 }

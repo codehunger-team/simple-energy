@@ -10,5 +10,5 @@ class Dealership extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['f_name', 'name', 'mobile', 'email', 'city', 'state', 'address', 'pincode', 'rent', 'locality', 'turnover', 'experience'];
+    protected $fillable = ['f_name', 'name', 'mobile', 'email', 'city', 'state', 'address', 'pincode', 'rent', 'locality', 'turnover', 'experience', 'application_number'];
 }

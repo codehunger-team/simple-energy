@@ -169,8 +169,11 @@
                                                     <select class="contact-form-style mb-20" id="vechile_name"
                                                         name="vehicle_name" required>
                                                         <option value="">--Select Vehicle Model--</option>
-                                                        <option value="single Tone">Simple Energy One Single Tone</option>
-                                                        <option value="dual Tone">Simple Energy One Dual Tone</option>
+                                                        @foreach ($products as $product)
+                                                            <option value="{{ $product->modal_no }}">
+                                                                {{ $product->modal_no }}</option>
+                                                        @endforeach
+
                                                     </select>
                                                     <span class="select-arrow"></span>
                                                 </div>
@@ -181,12 +184,10 @@
                                                     <select class="contact-form-style mb-20" id="vehicle_color"
                                                         name="vehicle_color" required>
                                                         <option value="">--Select Vehicle Color--</option>
-                                                        <option value="Azure Blue">Azure Blue</option>
-                                                        <option value="Namma Red">Namma Red</option>
-                                                        <option value="Grace White">Grace White</option>
-                                                        <option value="Brazen Black">Brazen Black</option>
-                                                        <option value="Brazen X">Brazen X</option>
-                                                        <option value="Light X ">Light X </option>
+                                                        < @foreach ($products as $product)
+                                                            <option value="{{ $product->color }}">
+                                                                {{ $product->color }}</option>
+                                                            @endforeach
                                                     </select>
                                                     <span class="select-arrow"></span>
                                                 </div>
@@ -253,8 +254,8 @@
                         <div class="col-lg-6">
                             <div class="contact-info-wrapper">
                                 <div class="col-sm-12">
-                                    <img class="img-responsive" src="admin/admin/upload_doc/UPI_QR_Code%20(1).png"
-                                        alt="">
+                                    <img class="img-responsive" src="{{ asset('assets/img/uri_qr_code.png') }}"
+                                        alt="" style="width: 100%; height: 100%">
                                 </div>
                             </div>
                         </div>
