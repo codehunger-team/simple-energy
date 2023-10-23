@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use Storage;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Input;
-use URL;
+use Illuminate\Support\Facades\Storage;
+
+// Your code here
+
 
 class ProductController extends Controller
 {
@@ -35,12 +34,8 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imgName = time() . '147.' . $image->getClientOriginalExtension();
-
-            $destinationPath = 'assets/product';
-            $imagePath = $destinationPath . "/" .  $imgName;
-            $image->move($destinationPath, $imgName);
-            $productImage = $imagePath;
+            $storagePath = 'products';
+            $productImage = $image->store($storagePath, 'public');
         } else {
             $productImage = "";
         }
@@ -73,14 +68,10 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imgName = time() . '147.' . $image->getClientOriginalExtension();
-
-            $destinationPath = 'assets/product';
-            $imagePath = $destinationPath . "/" .  $imgName;
-            $image->move($destinationPath, $imgName);
-            $product_file = $imagePath;
+            $storagePath = 'products';
+            $productImage = $image->store($storagePath, 'public');
         } else {
-            $product_file = $request->input('save_product_file');
+            $productImage = $request->input('save_product_file');
         }
 
 
@@ -88,7 +79,8 @@ class ProductController extends Controller
         $product->modal_no = $request->input('modal_no');
         $product->color = $request->input('color');
         $product->price = $request->input('price');
-        $product->image = $product_file;
+        $product->image = $productImage;
+
 
         $product->save();
 
@@ -100,11 +92,10 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         if ($product->delete()) {
 
-            if (!empty($product->image)) {
-                $imagePath = public_path($product->image);
-                if (file_exists($imagePath)) {
-                    unlink($imagePath);
-                }
+            $imagePath = $product->image;
+
+            if (Storage::disk('public')->exists($imagePath)) {
+                Storage::disk('public')->delete($imagePath);
             }
 
             return redirect('product')->withSuccess('Product deleted successfully.');

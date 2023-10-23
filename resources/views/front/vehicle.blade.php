@@ -25,7 +25,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <img src="{{ asset($product->image) }}" alt="">
+                                                    <img src="{{ asset('storage/' . $product->image) }}" alt="">
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
                                                             <h4>{{ $product->modal_no }}</h4>
@@ -38,108 +38,6 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                @else
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-                                                <img src="assets/img/vehicle/scoty1%20(1).png" alt="">
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Brazen X</h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-
-                                                <img src="assets/img/vehicle/scoty1%20(2).png" alt="">
-
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Grace White</h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-
-                                                <img src="assets/img/vehicle/scoty1%20(3).png" alt="">
-
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Azure Blue</h4>
-
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-
-                                                <img src="assets/img/vehicle/scoty1%20(4).png" alt="">
-
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Light X</h4>
-
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-
-                                                <img src="assets/img/vehicle/scoty1%20(5).png" alt="">
-
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Brazen X</h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">
-                                        <div class="product-wrapper mb-35">
-                                            <div class="product-img">
-
-                                                <img src="assets/img/vehicle/scoty1%20(6).png" alt="">
-                                                <div class="product-content-wrapper">
-                                                    <div class="product-title-spreed">
-                                                        <h4>Brazen Black</h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>Rs. 150,000.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 @endif
                             </div>
                         </div>

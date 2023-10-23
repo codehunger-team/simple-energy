@@ -46,16 +46,18 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @php $i = count($products); @endphp
-                        @foreach ($products as $product)
+
+                        @foreach ($products as $key => $product)
                             <tr>
-                                <td>{{ $i }}</td>
+                                <td>{{ $key + 1 }}</td>
                                 <td>{{ $product->modal_no }}</td>
                                 <td>{{ $product->color }}</td>
                                 <td>{{ $product->price }}</td>
-                                <td class="text-center"><a href="{{ asset($product->image) }}" target="_blank"><img
-                                            src="{{ asset($product->image) }}" alt=""
-                                            style="widows: 120px; height:60px"></a></td>
+                                <td class="text-center">
+                                    <a href="{{ asset('storage/' . $product->image) }}" target="_blank"> <img
+                                            src="{{ asset('storage/' . $product->image) }}" alt=""
+                                            style="width: 120px; height:60px"></a>
+                                </td>
                                 <td>
                                     <a href="product/{{ $product->id }}" class="btn btn-success btn-sm rounded-0"
                                         type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i
@@ -72,7 +74,6 @@
                                     </form>
                                 </td>
                             </tr>
-                            @php $i--; @endphp
                         @endforeach
 
                     </tbody>
