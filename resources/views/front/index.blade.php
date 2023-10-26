@@ -48,7 +48,8 @@
                 }
             }
         </style>
-        <div class="overview-area pt-135">
+        <div class="overview-area pt-135" style="
+        background-color: black;>
 
             <!-- Carousel -->
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -203,7 +204,8 @@
     <div class="banner-area pt-135 pb-100">
 
     </div>
-    <div class="product-area pb-190">
+    <div class="product-area pb-190" style="
+    background-color: antiquewhite;>
         <div class="container">
             <div class="section-title text-center mb-50">
                 <h2>CHOOSE YOUR BIKE</h2>

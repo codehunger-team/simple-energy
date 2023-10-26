@@ -23,7 +23,7 @@
                 <div class="col-lg-8 col-md-8 col-8">
                     <div class="header-contact-menu-wrapper pl-45">
                         <div class="header-contact">
-                            <h5 style="margin-right:40px;">WANT TO TALK WITH US <span
+                            <h5 style="margin-right:40px; color:white">WANT TO TALK WITH US <span
                                     class="text-primary">18008900720<span></h5>
                         </div>
                         <div class="menu-wrapper text-center">

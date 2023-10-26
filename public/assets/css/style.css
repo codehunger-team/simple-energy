@@ -365,7 +365,7 @@
     top: 0;
 }
 .main-menu {
-    background-color: #001232;
+    background-color: currentColor;
     margin-right: 30px;
     opacity: 0;
     position: absolute;
@@ -378,6 +378,10 @@
 }
 .stick .main-menu {
     top: -18px;
+}
+.breadcrumb-area {
+    background: center;
+    background-image: url('assets/img/banner/banner-4.jpg')
 }
 .main-menu.open {
     opacity: 1;
@@ -1520,7 +1524,7 @@
     margin-bottom: 30px;
 }
 .footer-widget-title > h3 {
-    color: #e4e4e4;
+    color: black;
     font-size: 24px;
     font-weight: 600;
     margin: 0 0 26px;

@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @section('content')
     <!-- Breadcrumb area start -->
-    <div class="breadcrumb-area pt-255 pb-170" style="background-image: url('assets/img/banner/banner-4.jpg')">
+    <div class="breadcrumb-area pt-255 pb-170" style="background: center;background-image: url('assets/img/banner/banner-4.jpg');">
         <div class="container-fluid">
             <div class="breadcrumb-content text-center">
                 <h2>About Us</h2>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="services-area pb-100">
+    <div class="services-area pb-100" style="background-color: antiquewhite;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
