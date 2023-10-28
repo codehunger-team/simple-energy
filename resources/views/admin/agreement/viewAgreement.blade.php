@@ -232,11 +232,11 @@ td{
                             12.0pt;
                             font-family:"Times New Roman",serif;
                             color:#0F243E'>
-                            This document will present for agreement on {{ date('d-m-Y', strtotime($agreement->agreement_date)) }} by M/s Revolt E Bike Mobility Pvt. Ltd. 
+                            This document will present for agreement on {{ date('d-m-Y', strtotime($agreement->agreement_date)) }} by M/s Simpleenergy Private Limited. 
                             A stamp duty of Rs. {{ $agreement->stamp_duty_fee }}/- ({{ $amountInWords }} only). 
                             The document was found admissible the Names and signatures of the executants. 
-                            This agreement is valid for only {{ $agreement->agreement_validity_time }} Years between Mr/M/s. {{ $agreement->user->name }} & M/s Revolt E-Bike Mobility Pvt. Ltd. 
-                            The Registration fee Rs. {{ $agreement->registration_fee }}/- has deposited in favour of M/s Revolt E-Bike Mobility Pvt. Ltd. 
+                            This agreement is valid for only {{ $agreement->agreement_validity_time }} Years between Mr/M/s. {{ $agreement->user->name }} & M/s Simpleenergy Private Limited. Ltd. 
+                            The Registration fee Rs. {{ $agreement->registration_fee }}/- has deposited in favour of M/s Simpleenergy Private Limited. Ltd. 
                             The registration amount of 90% will be refund after leaving the company. 
                             Agreement charge 50% will refund after 03 (three) orders completed. 
                             The total payable amount is Rs. {{ $agreement->payable_amount }}/- after end the period of this agreement will be cancel understood for any judicial cases & conditions. 
@@ -285,7 +285,7 @@ td{
                         <span>(.........................................)</span>
                     </div>
                     <div class="float-right">
-                        <span>M/s Revolt E-Mobility Pvt Ltd</span>
+                        <span>M/s Simpleenergy Private Limited</span>
                     </div>
                 </div>
             </div>

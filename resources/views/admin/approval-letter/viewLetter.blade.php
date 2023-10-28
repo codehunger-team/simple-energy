@@ -259,7 +259,7 @@
                             <p class=MsoNormal align=right style='margin-bottom:0in;
                             text-align:right;
                             line-height:normal'><span lang=EN-IN><img width=167 height=45 id="Picture 9"
-                                                 src="{{ url('assets/letter')}}/barcode (2).gif"></span></p>
+                                                 src="{{ url('assets/letter')}}/qrcode.jpg"></span></p>
                         </td>
                     </tr>
                 </table>
@@ -290,9 +290,9 @@
                         color:#00B0F0'>{{$approval->name}} </span><span style='font-size:12.0pt;
                         font-family:"Times New Roman",serif;
                         color:#0F243E'>is our authorized dealership/distributor. The above mentioned
-                        firm has authorized by M/s Revolt E-Mobility Pvt. Ltd for sale and service of
+                        firm has authorized by M/s Simpleenergy Private Limited for sale and service of
                         two wheeler electric motor vehicle. We are sending you this letter to confirm your Dealership
-                        of Two wheeler electric motor vehicle has been approved by “ M/s Revolt E-Mobility Pvt Ltd” for </span><span style='font-size:12.0pt;
+                        of Two wheeler electric motor vehicle has been approved by “ M/s Simpleenergy Private Limited” for </span><span style='font-size:12.0pt;
                         font-family:"Times New Roman",serif;
                                               color:#00B0F0'>{{$approval->year}} years </span><span style='font-size:12.0pt;
                         font-family:
@@ -439,14 +439,14 @@
             <img src="{{ url('public/assets/letter')}}/image006.png" style="width: 100%;">
             <div class="offer-letter-footer">
                 <hr class="footer-break-line">
-                <h1 class="footer-company-name">REVOLT E-MOBILITY PVT LTD</h1>
+                <h1 class="footer-company-name">Simpleenergy Private Limited</h1>
                 <p class="footer-company-address">
                     Head Office: # 76/4, Ground Floor, M-Block, 3<sup>rd</sup><br>
                     Avenue, East Anna Nagar, Chennai - 600102
                 </p>
                 <p class="footer-company-contact">
-                    Website: www.revoltemobility.org<br>
-                    E-Mail: info@revoltemobility.org<br>
+                    Website: https://simple1energy.in/<br>
+                    E-Mail: care@simple1energy.in<br>
                     GSTIN: 07AIGPD0584J1ZB PAN: AALCM2906K
                 </p>
             </div>

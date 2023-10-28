@@ -29,7 +29,7 @@
 
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                name="registrationID" placeholder="{{ __('Registration ID') }}"
+                                                name="email" placeholder="email"
                                                 value="" required autofocus>
                                         </div>
 
