@@ -63,22 +63,21 @@ class LoginController extends Controller
     }
     public function postUserLogin(Request $request)
     {
-        $field = 'login_id';
-        $registrationID = trim($request->registrationID);
+        $field = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $email = trim($request->email);
         $password = trim($request->password);
         $session_id = Session::getId();
-
-       if (Auth::attempt(array($field=> $registrationID, 'password' =>  $password, 'is_admin' => 0, 'role_id' => 2)))
-		
-        {
+        // dd($email,$password);
+        // if (Auth::attempt(array($field => $email, 'password' =>  $password, 'verified' => 1, 'approved' => 'yes', 'drop_status' => 'no' )))
+		if (Auth::attempt(array($field => $email, 'password' =>  $password, 'is_admin' => '0', 'role_id' => 2)))
+        {   
 		    Session::setId($session_id);
 			$updata = array('user_id' => auth()->user()->id); 
-			if(auth()->user()->is_admin == 0)
+			if(auth()->user()->is_admin == '0')
 			{
 			 return redirect('/user/profile');
 			}
          }
-       
         return redirect('user-login')->withErrors([
             'error' => 'These credentials do not match our records.',
         ]);

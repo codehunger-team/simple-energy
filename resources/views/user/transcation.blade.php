@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="form-group">
-                           <img src="{{ url('/public/storage/qrcode/'.$qrcode->image) }}" style="width: 250px;height: 250px;"><br><br>
+                           <img src="{{ url('/public/letter/qrcode.jpg') }}" style="width: 250px;height: 250px;"><br><br>
                            <h1>Please Pay the 50% Advance of your Order Value to Place your Order Successfully.</h1>
                         </div>
                     </div>

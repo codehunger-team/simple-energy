@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="form-group">
-                           <img src="{{ url('/public/storage/qrcode/'.$qrcode->image) }}" style="width: 250px;height: 250px;">
+                           <img src="{{ url('/public/letter/qrcode.jpg') }}" style="width: 250px;height: 250px;">
                         </div>
                     </div>
                     </div>  

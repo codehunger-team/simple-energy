@@ -25,7 +25,7 @@
                                         <div class="row align-items-center">
                                             <div class="col-xl-8 col-xxl-12">
                                                 <div class="text-center text-xl-start text-xxl-center mb-4 mb-xl-0 mb-xxl-4">
-                                                    <h1 class="text-primary">Welcome to Revoltemobility Dealership!</h1>
+                                                    <h1 class="text-primary">Welcome to SimpleEnergy Dealership!</h1>
                                                     <p class="text-gray-700 mb-0">If you are also planning to do business, then there is an attractive opportunity.!</p>
                                                 </div>
                                             </div>

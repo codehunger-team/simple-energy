@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>{{ config('app.name', 'Revoltemobility') }}</title>
+    <title>{{ config('app.name', 'simpleenergy') }}</title>
     <link href="{{ asset('css/user-styles.css') }}" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous">
@@ -22,7 +22,7 @@
         <!-- Sidenav Toggle Button-->
         <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle"><i
                 data-feather="menu"></i></button>
-        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="https://revoltemobility.com/">Revoltemobility</a>
+        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="https://simple1energy.in/">Simple Energy</a>
         <form class="form-inline me-auto d-none d-lg-block me-3">
             <div class="input-group">
                 {{-- <input class="form-control pe-0" type="search" placeholder="Search" aria-label="Search" /> --}}
@@ -157,7 +157,7 @@
         <footer class="footer-admin mt-auto footer-light">
             <div class="container-xl px-4">
                 <div class="row">
-                    <div class="col-md-6 small">Copyright © Revoltemobility {{ now()->year }}</div>
+                    <div class="col-md-6 small">Copyright © SimpleEnergy {{ now()->year }}</div>
                     <div class="col-md-6 text-md-end small">
                         <a href="#!">Privacy Policy</a>
                         ·
