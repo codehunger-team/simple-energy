@@ -1035,7 +1035,7 @@ textarea:focus {
     padding-top: 130px;
 }
 .pt-135 {
-    padding-top: 135px;
+    padding-top: 135px !important;
 }
 .pt-140 {
     padding-top: 140px;

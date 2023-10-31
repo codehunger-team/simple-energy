@@ -1,7 +1,17 @@
 <style>
-    .header-area {
-        padding: 10px 0px 10px 0px;
+
+    @media only screen and (max-width: 600px) {
+        .header-area {
+            padding: 12px 0px 10px 0px;
+        }
     }
+
+    @media only screen and (min-width: 600px) {
+        .header-area {
+            padding: 40px 0px 10px 0px;
+        }
+    }
+       
 </style>
 <a id="scrollUp" class="btn-primary" href="tel:18008900720"
     style="position: fixed;bottom:49%; z-index: 2147483647; display: block;"><i class=" icofont icofont-ui-call"></i></a>
