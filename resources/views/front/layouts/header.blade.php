@@ -1,6 +1,6 @@
 <style>
     .header-area {
-        padding: 40px 0px 10px 0px;
+        padding: 10px 0px 10px 0px;
     }
 </style>
 <a id="scrollUp" class="btn-primary" href="tel:18008900720"
@@ -14,23 +14,30 @@
     <div class="header-area transparent-bar ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-4">
+                <div class="col-lg-2 col-md-2 col-4">
                     <div class="logo-small-device">
                         <a href="{{ route('home') }}"><img alt=""
                                 src="{{ asset('assets/img/logo/logo4.png') }}"></a>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-8">
+                <div class="col-lg-10 col-md-10 col-10">
                     <div class="header-contact-menu-wrapper pl-45">
                         <div class="header-contact">
-                            <h5 style="margin-right:40px; color:white">WANT TO TALK WITH US <span
-                                    class="text-primary">18008900720<span></h5>
+                            <h5 style="margin-right:40px; color:white">WANT TO TALK WITH US </br>18008900720 </h5>
                         </div>
                         <div class="menu-wrapper text-center">
                             <button class="menu-toggle" style="margin-right:20px;">
                                 <img class="s-open" alt="" src="{{ asset('assets/img/icon-img/menu.png') }}">
                                 <img class="s-close" alt=""
                                     src="{{ asset('assets/img/icon-img/menu-close.png') }}">
+                            </button>
+                            <button class="menu-toggle" style="margin-left:40px;">
+                                <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
+                                            Now</button></a></li>
+                            </button>
+                            <button class="menu-toggle" style="margin-left:40px;">
+                                <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
+                                            Now</button></a></li>
                             </button>
                             <button class="menu-toggle" style="margin-left:40px;">
                                 <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book

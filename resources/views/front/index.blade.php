@@ -44,7 +44,7 @@
                 }
 
                 .pt-135 {
-                    padding-top: 95px !important;
+                    padding-top: 67px !important;
                 }
             }
         </style>

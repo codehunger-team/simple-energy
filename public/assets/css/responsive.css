@@ -666,7 +666,7 @@
 }    
 .mean-container a.meanmenu-reveal {
   top: -36px;
-    border: 1px solid #666;
+    /* border: 1px solid #666; */
     padding: 6px 9px 3px;
 }
 .header-white .mean-container a.meanmenu-reveal {
