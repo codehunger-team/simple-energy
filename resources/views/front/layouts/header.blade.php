@@ -36,23 +36,20 @@
                                 <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
                                             Now</button></a></li>
                             </button>
-
+                           
                             <div class="main-menu">
                                 <nav>
                                     <ul>
                                         <li><a href="{{ route('home') }}">home</a></li>
 
                                         <li class="active"><a href="{{ route('about') }}">about us </a></li>
-
                                         <li><a href="{{ route('vehicle') }}">Vehicle</a></li>
 
                                         <li><a href="{{ route('contact.us') }}">contact</a></li>
                                         <li><a href="{{ route('dealership') }}"> Dealership</a></li>
-
-
-
                                         <li><a href="{{ route('check.status') }}"><button class="btn btn-primary">Check
                                                     Status</button></a></li>
+                                                    
                                     </ul>
                                 </nav>
                             </div>

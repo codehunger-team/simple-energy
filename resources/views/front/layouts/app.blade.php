@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from simpleonenergy.saloon.parkensolution.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Oct 2023 04:21:30 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 

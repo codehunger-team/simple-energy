@@ -93,7 +93,7 @@
 
                                     <a href="{{ route('book.now') }}">
                                         <div class="question-content-number"
-                                            style="background-color:#198754;border-radius:10px;">
+                                            style="border-radius:10px;">
                                             <h6> BOOK NOW</h6>
                                         </div>
                                     </a>
@@ -115,7 +115,7 @@
 
                                     <a href="{{ route('book.now') }}">
                                         <div class="question-content-number"
-                                            style="background-color:#198754;border-radius:10px;">
+                                            style="border-radius:10px;">
                                             <h6> BOOK NOW</h6>
                                         </div>
                                     </a>

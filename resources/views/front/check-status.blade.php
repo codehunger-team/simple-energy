@@ -126,7 +126,7 @@
                         </div>
                         <div class="contact-message">
                             <form method="GET"
-                                action="https://simpleonenergy.saloon.parkensolution.com/check_booking_list.php">
+                                action="#">
                                 <input name="id" id="idd" type="hidden">
                                 <div class="row">
                                     <div class="col-sm-6">
