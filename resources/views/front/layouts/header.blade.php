@@ -45,13 +45,14 @@
                                 <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
                                             Now</button></a></li>
                             </button>
+                            {{-- <button class="menu-toggle" style="margin-left:40px;">
+                                <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Payment</button></a></li>
+                            </button> --}}
+
+                            <button type="button" id="pay_data" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                Payment</button>
                             <button class="menu-toggle" style="margin-left:40px;">
-                                <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
-                                            Now</button></a></li>
-                            </button>
-                            <button class="menu-toggle" style="margin-left:40px;">
-                                <li><a href="{{ route('book.now') }}"><button class="btn btn-primary">Book
-                                            Now</button></a></li>
+                                <li><a href="{{ url('user-login') }}"><button class="btn btn-primary">Login</button></a></li>
                             </button>
                            
                             <div class="main-menu">
