@@ -92,6 +92,12 @@
                                             Now</button></a></li>
                                 <li><a href="{{ route('check.status') }}"><button class="btn btn-primary">Check
                                             Status</button></a></li>
+                                            {{-- <li><button type="button" id="pay_data"
+                                                class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                                Payment</button></li> --}}
+                                    <li><a href="{{ url('user-login') }}"><button
+                                                class="btn btn-primary">Login</button></a></li>
                             </ul>
                         </nav>
                     </div>
