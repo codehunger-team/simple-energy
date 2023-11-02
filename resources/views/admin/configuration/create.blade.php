@@ -194,6 +194,11 @@
                                             value="{{ getConfigValue('scanner') }}">
                                     </div>
                                 </div>
+
+                            </div>
+                            <div class="row">
+
+                                <img src="" alt="" id="qr-image" style="width: 200px; height: 200px;">
                             </div>
                             <!-- Button -->
                             <div class="pl-lg-4">
@@ -215,6 +220,20 @@
 
         </div>
     </form>
+
+
+    @push('scripts')
+        <script>
+            $(document).ready(function() {
+                var scannerValue = "{{ getConfigValue('scanner') }}";
+                if (scannerValue) {
+                    $("#qr-image").attr("src", "{{ asset('storage') }}/" + scannerValue);
+                } else {
+                    $("#qr-image").hide();
+                }
+            });
+        </script>
+    @endpush
 
 
 @endsection
