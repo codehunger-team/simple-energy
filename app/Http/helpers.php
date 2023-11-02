@@ -8,6 +8,6 @@ function getConfigValue($key)
     if ($isExist) {
         return Configuration::where('key', $key)->first()->value;
     } else {
-       return 'no data found';
+        return 'no data found';
     }
 }

@@ -11,7 +11,7 @@ class ConfigurationController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         return view('admin/configuration/create');
     }
 
@@ -20,21 +20,38 @@ class ConfigurationController extends Controller
      */
     public function create()
     {
-        
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {   
-        $datas = $request->except('_token','_method');
-        foreach($datas as $key =>  $data) {
-            $isExist = Configuration::where('key',$key)->first();
-            if($isExist) {
-                $isExist->update(['value'=>$data]); 
+    {
+        $datas = $request->except('_token', '_method');
+        foreach ($datas as $key =>  $data) {
+            $isExist = Configuration::where('key', $key)->first();
+            if ($isExist) {
+
+                $isExist->update(['value' => $data]);
             } else {
-                Configuration::create(['value'=>$data,'key'=>$key]);
+                Configuration::create(['value' => $data, 'key' => $key]);
+            }
+        }
+
+        if ($request->hasFile('scanner')) {
+            $scanner = $request->file('scanner');
+            $storagePath = 'configurations';
+            $scannerPath = $scanner->store($storagePath, 'public');
+
+            $scannerConfig = Configuration::where('key', 'scanner')->first();
+
+            if ($scannerConfig) {
+                $scannerConfig->update(['value' => $scannerPath]);
+            } else {
+                Configuration::create([
+                    'key' => 'scanner',
+                    'value' => $scannerPath,
+                ]);
             }
         }
         return redirect('configuration')->withSuccess('added successfully.');

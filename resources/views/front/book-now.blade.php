@@ -254,7 +254,7 @@
                         <div class="col-lg-6">
                             <div class="contact-info-wrapper">
                                 <div class="col-sm-12">
-                                    <img class="img-responsive" src="{{ asset('assets/img/uri_qr_code.png') }}"
+                                    <img class="img-responsive" src="{{ asset('storage/' . getConfigValue('scanner')) }}"
                                         alt="" style="width: 100%; height: 100%">
                                 </div>
                             </div>
@@ -268,23 +268,32 @@
                                         <div class="">
                                             <label for="disabledTextInput" class="form-label">Bank Name</label>
                                             <input type="text" id="disabledTextInput"
-                                                value="STATE BANK OF INDIA."name="bank_name" class="form-control" readonly
-                                                disabled>
+                                                value="{{ getConfigValue('bank_name') }}" name="bank_name"
+                                                class="form-control" readonly disabled>
+                                        </div>
+                                        <div class="">
+                                            <label for="disabledTextInput" class="form-label">Account Holder Name</label>
+                                            <input type="text" id="disabledTextInput"
+                                                value="{{ getConfigValue('account_holder_name') }}"
+                                                name="account_holder_name" class="form-control" readonly disabled>
                                         </div>
                                         <div class="">
                                             <label for="disabledTextInput" class="form-label">Account Number</label>
                                             <input type="text" id="disabledTextInput" class="form-control"
-                                                value="3125632515"name="account_no" readonly disabled>
+                                                value="{{ getConfigValue('account_number') }}" name="account_no" readonly
+                                                disabled>
                                         </div>
                                         <div class="">
                                             <label for="disabledTextInput" class="form-label">Branch Name</label>
                                             <input type="text" id="disabledTextInput" class="form-control"
-                                                value="YAHLANKA." name="branch_name" readonly disabled>
+                                                value="{{ getConfigValue('branch_name') }}" name="branch_name" readonly
+                                                disabled>
                                         </div>
                                         <div class="">
                                             <label for="disabledTextInput" class="form-label">IFSC Code</label>
                                             <input type="text" id="disabledTextInput" class="form-control"
-                                                value="SBIN0002356"name="ifsc_code" readonly disabled>
+                                                value="{{ getConfigValue('ifsc_code') }}" name="ifsc_code" readonly
+                                                disabled>
                                         </div>
                                     </form>
                                 </div>
