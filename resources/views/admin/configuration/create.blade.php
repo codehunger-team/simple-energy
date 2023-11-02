@@ -51,7 +51,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="modal_no">Contact Number 1<span
+                                        <label class="form-control-label" for="modal_no">Toll Free number<span
                                                 class="small text-danger">*</span></label>
                                         <input type="text" id="modal_no" class="form-control" name="contact_number_1"
                                             value="{{getConfigValue('contact_number_1')}}">

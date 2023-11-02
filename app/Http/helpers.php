@@ -4,5 +4,10 @@ use App\Models\Configuration;
 
 function getConfigValue($key)
 {
-   return Configuration::where('key',$key)->first()->value;
+    $isExist = Configuration::where('key', $key)->first();
+    if ($isExist) {
+        return Configuration::where('key', $key)->first()->value;
+    } else {
+        'no data found';
+    }
 }
