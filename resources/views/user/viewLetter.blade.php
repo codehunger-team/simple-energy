@@ -441,7 +441,7 @@
                 <hr class="footer-break-line">
                 <h1 class="footer-company-name">REVOLT E-MOBILITY PVT LTD</h1>
                 <p class="footer-company-address">
-                    Simpleenergy Private Limited, 9th floor, Wing A, No.2/2, North Gate Phase-2,Venkatala Village, Yelahanka Hobil, Bengaluru-560064
+                    {{getConfigValue('address')}}
                 </p>
                 <p class="footer-company-contact">
                     Website: www.simple1energy.com<br>

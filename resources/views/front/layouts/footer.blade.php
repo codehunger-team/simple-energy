@@ -17,7 +17,7 @@
                                 manufactured in India. </p>
                             <div class="footer-support">
                                 <h5>FOR SUPPORT</h5>
-                                <span> <a href="tel:18008900720">18008900720
+                                <span> <a href="tel:{{getConfigValue('contact_number_1')}}">{{getConfigValue('contact_number_1')}}
                                         (Toll Free)</a></span>
                             </div>
                         </div>
@@ -54,15 +54,7 @@
                                     <span>Address</span>
                                 </div>
                                 <div class="food-info-content">
-                                    <p>Simpleenergy Private
-                                        Limited, 9th floor,
-                                        Wing A, No.2/2,
-                                        North
-                                        Gate
-                                        Phase-2,Venkatala
-                                        Village, Yelahanka
-                                        Hobil,
-                                        Bengaluru-560064</p>
+                                    <p>{{getConfigValue('address')}}</p>
                                 </div>
                             </div>
                             <div class="food-address">
@@ -80,10 +72,10 @@
                                     <span>Phone</span>
                                 </div>
                                 <div class="food-info-content">
-                                    <a href="tel:18008900720">+91
-                                        18008900720</a>
-                                    <a href="tel:8537014931">+91
-                                        8537014931</a>
+                                    <a href="tel:{{getConfigValue('contact_number_1')}}">+91
+                                        {{getConfigValue('contact_number_1')}}</a>
+                                    <a href="tel:{{getConfigValue('contact_number_2')}}">+91
+                                        {{getConfigValue('contact_number_2')}}</a>
                                 </div>
                             </div>
                             <div class="food-address">

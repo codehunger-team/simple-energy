@@ -28,9 +28,7 @@
                                 </div>
                                 <div class="communication-text">
                                     <h4>Address:</h4>
-                                    <p>Simpleenergy Private Limited 9th Floor, Wing A, Survey No. 2/ 2, North Gate Phase 2,
-                                        Modern Asset, Venkatala Village, Yelahanka, Hobli, Bengaluru, Karnataka 560064,
-                                        India</p>
+                                    <p>{{getConfigValue('address')}}</p>
                                 </div>
                             </div>
                             <div class="single-communication">
@@ -39,7 +37,7 @@
                                 </div>
                                 <div class="communication-text">
                                     <h4>Phone:</h4>
-                                    <p>18008900720 - 8537014931</p>
+                                    <p>{{getConfigValue('contact_number_1')}} - {{getConfigValue('contact_number_2')}}</p>
                                 </div>
                             </div>
                             <div class="single-communication">

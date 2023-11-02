@@ -187,7 +187,7 @@
                                       icofont-phone btn-primary"></i>
                                 </div>
                                 <div class="question-content-number">
-                                    <h6> 18008900720</h6>
+                                    <h6> {{getConfigValue('contact_number_1')}}</h6>
                                 </div>
                             </div>
                         </div>

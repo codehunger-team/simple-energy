@@ -125,6 +125,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Dealership List') }}</span></a>
             </li>
+            <li class="nav-item {{ Nav::isRoute('home') }}">
+                <a class="nav-link" href="{{ route('configuration') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Configuration</span></a>
+            </li>
 
             {{-- <!-- Divider -->
         <hr class="sidebar-divider">

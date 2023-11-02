@@ -52,6 +52,9 @@ Route::group(['middleware' => ['is_admin', 'XSS']], function () {
 	Route::get('contact-by-form-list', 'HomeController@contactByForm')->name('contact.by.form.list');
 	Route::get('booking-list', 'HomeController@bookingList')->name('front.booking.list');
 	Route::get('dealership-list', 'HomeController@dealershipList')->name('front.dealership.list');
+
+	Route::get('/configuration', 'ConfigurationController@index')->name('configuration');
+	Route::post('/store-configuration', 'ConfigurationController@store')->name('configuration.store');
 });
 
 
